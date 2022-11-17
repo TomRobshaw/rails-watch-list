@@ -1,0 +1,8 @@
+<h1>Movie</h1>
+<h4><%= @movie.title %></h4>
+<p><%= @movie.overview %></p>
+<p><%= @movie.poster_url %></p>
+<p><%= @movie.rating %></p>
+
+<%= link_to "Create a Bookmark", new_movie_bookmark_path(@movie), class: "btn btn-danger" %>
+<%= link_to "Back to movies", movies_path, class: "btn btn-primary" %>
