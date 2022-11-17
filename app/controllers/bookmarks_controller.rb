@@ -16,6 +16,12 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def destroy
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    redirect_to list_path(@bookmark.list), notice: 'Movie was successfully deleted.', status: :see_other
+  end
+
   private
 
   def set_list
